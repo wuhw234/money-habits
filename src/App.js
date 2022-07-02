@@ -5,6 +5,7 @@ import Home from './pages/home/Home'
 import Signup from './pages/account/Signup'
 import About from './pages/about/About'
 import Habits from './pages/habits/Habits'
+import Goals from './pages/goals/Goals'
 import Navbar from './navbar/Navbar'
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
         <Route exact path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/login' element={<Signup />} />
         <Route path='/habits' element={<Habits />} />
+        <Route path='/goals' element={<Goals />} />
       </Routes>
     </Router>
   );
