@@ -14,10 +14,9 @@ const Navbar = () => {
         <div className='collapse navbar-collapse' id='navbarTogglerDemo03'>
           <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
             <Link route='/' text='Home' />
+            <Link route='/managehabits' text='Habits' />
+            <Link route='/logspending' text='Spending' />
             <Link route='/about' text='About' />
-            <Link route='/managehabits' text='Manage Habits' />
-            <Link route='/loghabits' text='Log Habits' />
-            <Link route='/spending' text='Spending' />
           </ul>
           <ul className='navbar-nav d-flex'>
             <SignupButton />
