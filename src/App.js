@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom'
 import Home from './pages/home/Home'
 import Signup from './pages/account/Signup'
+import Login from './pages/account/Login'
 import About from './pages/about/About'
 import Habits from './pages/habits/Habits'
 import Goals from './pages/goals/Goals'
@@ -16,7 +17,7 @@ function App() {
         <Route exact path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path='/login' element={<Signup />} />
+        <Route path='/login' element={<Login />} />
         <Route path='/habits' element={<Habits />} />
         <Route path='/goals' element={<Goals />} />
       </Routes>

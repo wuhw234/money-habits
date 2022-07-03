@@ -1,13 +1,13 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
-
 import Link from './Link'
 import Logo from './Logo'
 import Toggle from './Toggle'
+import SignupButton from './SignupButton'
+import LoginButton from './LoginButton'
 
 const Navbar = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+    <nav className='navbar navbar-expand-lg navbar-light bg-light' >
       <div className='container-fluid'>
         <Toggle />
         <Logo text='Money Habits' />
@@ -19,8 +19,8 @@ const Navbar = () => {
             <Link route='/about' text='About' />
           </ul>
           <ul className='navbar-nav d-flex'>
-            <Link route='/signup' text='Sign Up' />
-            <Link route='/login' text='Log In' /> 
+            <SignupButton />
+            <LoginButton />
           </ul>
         </div>
       </div>
