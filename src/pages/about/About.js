@@ -5,8 +5,8 @@ const About = () => {
     <div>
       <h2 className='py-4 text-center'>Reward yourself for good habits</h2>
       <p>
-        Sticking to good habits and reaching your goals is hard. MoneyHabits gives you a way to monetize your goals and habits
-        by attaching a dollar value to them. Whenever you complete a habit or a goal and log it, its value will be added to your total
+        Sticking to good habits and reaching your goals is hard. MoneyHabits gives you a way to monetize your habits
+        by attaching a dollar value to them. Whenever you complete a habit log it, its value will be added to your total
         balance. Whenever you spend money on a luxury (eating out, clothes, etc), you subtract cash from this balance.
       </p>
       <h2 className='py-4 text-center'>Why does this work?</h2>
