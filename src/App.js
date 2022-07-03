@@ -5,10 +5,8 @@ import Home from './pages/home/Home'
 import Signup from './pages/account/Signup'
 import Login from './pages/account/Login'
 import About from './pages/about/About'
-import ManageHabits from './pages/habits/ManageHabits'
-import LogHabits from './pages/habits/LogHabits'
-import LogSpending from './pages/spending/LogSpending'
-import SeeSpending from './pages/spending/SeeSpending'
+import Habits from './pages/habits/Habits'
+import Spending from './pages/spending/Spending'
 import Navbar from './navbar/Navbar'
 
 function App() {
@@ -20,11 +18,8 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/managehabits' element={<ManageHabits />} />
-        <Route path='/loghabits' element={<LogHabits />} />
-        <Route path='/managehabits' element={<ManageHabits />} />
-        <Route path='/logspending' element={<LogSpending />} />
-        <Route path='/seespending' element={<SeeSpending />} />
+        <Route path='/habits' element={<Habits />} />
+        <Route path='/spending' element={<Spending />} />
       </Routes>
     </Router>
   );

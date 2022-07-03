@@ -1,13 +1,12 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 
-const SeeSpending = () => {
+const SpendingHistory = () => {
   return (
     <div>
-      <Link to='/logspending'>Log spending</Link>
       SeeSpending
     </div>
   )
 }
 
-export default SeeSpending
+export default SpendingHistory

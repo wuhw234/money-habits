@@ -5,7 +5,6 @@ const LogHabits = () => {
   return (
     <div>
         <p>replace this link with conditional render</p>
-        <Link to='/managehabits'>Manage Habits</Link>
     <p> add tab here to switch between logging and managing habits</p>
   <h1>Total Money Made From Habits:</h1>
   <form>
