@@ -5,8 +5,6 @@ const LogSpending = () => {
   return (
     <div>
       <h1>Your total spending is:</h1>
-      <Link to='/seespending'>See spending logs</Link>
-      <p>replace this link with conditional render</p>
       <form>
         <h2>Log a spending</h2>
         <label for='name' className='form-label'>Name</label>

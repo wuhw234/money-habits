@@ -2,6 +2,7 @@ import {React, useState} from 'react'
 import {Tab, Tabs} from 'react-bootstrap'
 import LogHabits from './LogHabits'
 import ManageHabits from './ManageHabits'
+import History from './History'
 
 const Habits = () => {
   return (
@@ -12,6 +13,9 @@ const Habits = () => {
   </Tab>
   <Tab eventKey="logHabits" title="Log">
     <LogHabits />
+  </Tab>
+  <Tab eventKey="history" title="History">
+    <History />
   </Tab>
 </Tabs>
     </div>

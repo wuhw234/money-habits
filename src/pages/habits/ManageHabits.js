@@ -5,7 +5,8 @@ import {Tab, Tabs} from 'react-bootstrap'
 const ManageHabits = () => {
   return (
     <div>
-  <h1>Manage your habits:</h1>
+  <h1>Total Money Made From Habits:</h1>
+  <h2>Manage your habits:</h2>
   <form>
   </form>
 
