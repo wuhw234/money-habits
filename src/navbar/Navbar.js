@@ -15,7 +15,7 @@ const Navbar = () => {
           <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
             <Link route='/' text='Home' />
             <Link route='/habits' text='Habits' />
-            <Link route='/spending' text='Spending' />
+            <Link route='/expenses' text='Spending' />
             <Link route='/about' text='About' />
           </ul>
           <ul className='navbar-nav d-flex'>

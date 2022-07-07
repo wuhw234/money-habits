@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 
-const LogSpending = () => {
+const LogExpenses = () => {
   return (
     <div>
       <h1>Your total spending is:</h1>
@@ -18,4 +18,4 @@ const LogSpending = () => {
   )
 }
 
-export default LogSpending
+export default LogExpenses

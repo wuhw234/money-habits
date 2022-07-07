@@ -6,7 +6,7 @@ import Signup from './pages/account/Signup'
 import Login from './pages/account/Login'
 import About from './pages/about/About'
 import Habits from './pages/habits/Habits'
-import Spending from './pages/spending/Spending'
+import Expenses from './pages/expenses/Expenses'
 import Navbar from './navbar/Navbar'
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/habits' element={<Habits />} />
-        <Route path='/spending' element={<Spending />} />
+        <Route path='/expenses' element={<Expenses />} />
       </Routes>
     </Router>
   );

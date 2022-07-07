@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SpendingHistory = () => {
+const ExpensesHistory = () => {
   return (
     <div>
       History
@@ -8,4 +8,4 @@ const SpendingHistory = () => {
   )
 }
 
-export default SpendingHistory
+export default ExpensesHistory
