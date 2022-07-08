@@ -1,26 +1,16 @@
 require('dotenv').config()
-const { Sequelize, Model, DataTypes } = require('sequelize')
-
-const sequelize = new Sequelize(process.env.PGHOST)
+const { DataTypes } = require('sequelize')
 
 //ADD FOREIGN KEY
-const Habit = sequelize.define('Habit', {
-  id: {
-    type: DataTypes.UUID,
-    primaryKey: true,
-  },
-  user_id: {
-    type: DataTypes.UUID,
-    primaryKey: true,
-    autoIncrement: true
-  },
-  name: {
-    type: DataTypes.TEXT,
-    allowNull: false
-  },
-  value: {
-    type: DataTypes.FLOAT
-  }
-})
-
-module.exports = Habit
+module.exports = (sequelize) => {
+  return sequelize.define('Habit', {
+    name: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    value: {
+      type: DataTypes.FLOAT,
+      allowNull: false
+    }
+  })
+}
