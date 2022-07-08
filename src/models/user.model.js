@@ -6,15 +6,20 @@ module.exports = (sequelize) => {
   return sequelize.define('User', {
   username: {
     type: DataTypes.TEXT,
-    allowNull: false
+    allowNull: false,
+    unique: true
   },
   email: {
     type: DataTypes.TEXT,
-    allowNull: false
+    allowNull: false,
+    unique: true
   },
   password_hash: {
     type: DataTypes.TEXT,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      is: /^[0-9a-f]{64}$/i
+    }
   },
   earned: {
     type: DataTypes.FLOAT,
