@@ -1,16 +1,20 @@
 require('dotenv').config()
-const { DataTypes } = require('sequelize')
+const { Model, DataTypes } = require('sequelize')
+const { sequelize } = require('../database/db.js')
 
-//ADD FOREIGN KEY
-module.exports = (sequelize) => {
-  return sequelize.define('Habit', {
-    name: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    },
-    value: {
-      type: DataTypes.FLOAT,
-      allowNull: false
-    }
-  })
-}
+class Habit extends Model {}
+
+Habit.init({
+  name: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  value: {
+    type: DataTypes.FLOAT,
+    allowNull: false
+  }
+}, {
+  sequelize,
+  modelName: 'Habits'
+})
+module.exports = Habit

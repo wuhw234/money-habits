@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json())
 app.use('/api/habits', habits)
 app.use('/api/expenses', expenses)
-app.use('/api/users', users)
+app.use('/api/users', users )
 
 const start = async () => {
   await connectToDatabase()

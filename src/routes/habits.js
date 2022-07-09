@@ -10,11 +10,11 @@ router.post('/', (req, res) => {
 
 })
 
-router.patch('/:habit', (req, res) => {
+router.patch('/', (req, res) => {
 
 })
 
-router.delete('/:habit', (req, res) => {
+router.delete('/', (req, res) => {
     
 })
 

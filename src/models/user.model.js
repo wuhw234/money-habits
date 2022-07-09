@@ -1,9 +1,10 @@
 require('dotenv').config()
-const { DataTypes } = require('sequelize')
+const { Model, DataTypes } = require('sequelize')
+const { sequelize } = require('../database/db.js')
 
-//Add foreign key
-module.exports = (sequelize) => {
-  return sequelize.define('User', {
+class User extends Model {}
+
+User.init({
   username: {
     type: DataTypes.TEXT,
     allowNull: false,
@@ -15,7 +16,7 @@ module.exports = (sequelize) => {
     unique: true
   },
   password_hash: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING(64),
     allowNull: false,
     validate: {
       is: /^[0-9a-f]{64}$/i
@@ -29,4 +30,9 @@ module.exports = (sequelize) => {
     type: DataTypes.FLOAT,
     allowNull: false
   }
-})}
+}, {
+  sequelize,
+  modelName: 'Users'
+})
+
+module.exports = User

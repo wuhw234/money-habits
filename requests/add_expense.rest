@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/expenses
+content-type: application/json
+
+{
+    "name": "biang biang",
+    "cost": 12
+}
