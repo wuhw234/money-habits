@@ -1,20 +1,23 @@
 var express = require('express');
+const { Habit } = require('../models/index')
 
 var router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+  const habits = await Habit.findAll()
+  res.json(habits)
 
 })
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
+  const habit = req.body
+})
+
+router.patch('/', async (req, res) => {
 
 })
 
-router.patch('/', (req, res) => {
-
-})
-
-router.delete('/', (req, res) => {
+router.delete('/', async (req, res) => {
     
 })
 

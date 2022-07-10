@@ -10,29 +10,23 @@ User.init({
     allowNull: false,
     unique: true
   },
-  email: {
-    type: DataTypes.TEXT,
-    allowNull: false,
-    unique: true
-  },
-  password_hash: {
+  passwordHash: {
     type: DataTypes.STRING(64),
     allowNull: false,
-    validate: {
-      is: /^[0-9a-f]{64}$/i
-    }
   },
   earned: {
     type: DataTypes.FLOAT,
-    allowNull: false
+    defaultValue: 0
   },
   spent: {
     type: DataTypes.FLOAT,
-    allowNull: false
+    defaultValue: 0
   }
 }, {
   sequelize,
-  modelName: 'Users'
+  modelName: 'Users',
+  underscored: true,
+  timestamps: false,
 })
 
 module.exports = User

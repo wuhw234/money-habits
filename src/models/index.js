@@ -6,9 +6,9 @@ User.hasMany(Habit);
 User.hasMany(Expense);
 
 (async () => {
+  await User.sync({ force: true })
   await Expense.sync({ force: true })
   await Habit.sync({ force: true })
-  await User.sync({ force: true })
 })()
 
 module.exports = {
