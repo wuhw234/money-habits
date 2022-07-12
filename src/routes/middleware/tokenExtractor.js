@@ -14,4 +14,4 @@ const tokenExtractor = (req, res, next) => {
     next()
   }
 
-export default tokenExtractor
+module.exports = tokenExtractor

@@ -4,11 +4,6 @@ const { User } = require('../models/index')
 
 var router = express.Router();
 
-router.get('/', async (req, res) => {
-  const users = await User.findAll()
-  res.json(users)
-})
-
 router.post('/', async (req, res) => {
   const {username, password} = req.body
   try {
@@ -19,15 +14,6 @@ router.post('/', async (req, res) => {
   }
   catch (error) {
     return res.status(400).json({ error: error })
-  }
-})
-
-router.get('/:id', async (req, res) => {
-  const user = await User.findByPk(req.params.id)
-  if (user) {
-    res.json(user)
-  } else {
-    res.status(404).end()
   }
 })
 

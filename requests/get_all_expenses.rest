@@ -1,2 +1,0 @@
-GET http://localhost:3001/api/expenses
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFuZHkiLCJpZCI6MiwiaWF0IjoxNjU3NDg2OTQ3fQ.dylHvmtTqSv_VU_etHeCW6q3hrciW2iFlYgtRTHoKSg

@@ -30,34 +30,38 @@ router.post('/', tokenExtractor, async (req, res) => {
 })
 
 
-router.patch('/:id', tokenExtractor, async (req, res) => {
+router.patch('/', tokenExtractor, async (req, res) => {
   try {
-      const expenseId = req.params.id
-      const user = await User.findByPk(req.decodedToken.id)
-      const expense = await Expense.update({...req.body, UserId: user.id}, {
-          where: {
-              id: expenseId,
-              UserId: user.id
-          }
-      })
-      res.json(expense)
-    } catch(error) {
-      return res.status(400).json({ error })
+    if (!req.body['name'] || !req.body['cost']) {
+      throw new Error('Invalid body')
     }
+    const expenseId = Number(req.query.id)
+    const user = await User.findByPk(req.decodedToken.id)
+    const expense = await Expense.findOne({where: { id: expenseId, UserId: user.id }})
+    if (!expense) {
+      throw new Error('No expense found')
+    }
+
+    const updatedExpense = await expense.update({...req.body})
+    res.json(updatedExpense)
+  } catch(error) {
+    return res.status(400).json({ error })
+  }
 })
 
 
-router.delete('/:id', async (req, res) => {
+router.delete('/', tokenExtractor, async (req, res) => {
   try {
-      const expenseId = req.params.id
+      const expenseId = Number(req.query.id)
       const user = await User.findByPk(req.decodedToken.id)
-      const expense = await Expense.update({...req.body, UserId: user.id}, {
-          where: {
-              id: expenseId,
-              UserId: user.id
-          }
-      })
-      res.json(expense)
+      const expense = await Expense.findOne({where: { id: expenseId, UserId: user.id }})
+      console.log('expense found', expense)
+      if (!expense) {
+        throw new Error('No expense found')
+      }
+      const deletedExpense = await expense.destroy()
+      console.log('deleted expense', deletedExpense)
+      res.json(deletedExpense)
     } catch(error) {
       return res.status(400).json({ error })
     }

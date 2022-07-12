@@ -30,9 +30,9 @@ router.post('/', tokenExtractor, async (req, res) => {
     }
 })
 
-router.patch('/:id', tokenExtractor, async (req, res) => {
+router.patch('/', tokenExtractor, async (req, res) => {
     try {
-        const habitId = req.params.id
+        const habitId = req.query.id
         const user = await User.findByPk(req.decodedToken.id)
         const habit = await Habit.update({...req.body, UserId: user.id}, {
             where: {
@@ -46,9 +46,9 @@ router.patch('/:id', tokenExtractor, async (req, res) => {
       }
 })
 
-router.delete('/:id', async (req, res) => {
+router.delete('/', async (req, res) => {
     try {
-        const habitId = req.params.id
+        const habitId = req.query.id
         const user = await User.findByPk(req.decodedToken.id)
         const habit = await Habit.update({...req.body, UserId: user.id}, {
             where: {
