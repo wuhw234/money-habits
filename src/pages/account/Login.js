@@ -2,11 +2,10 @@ import React, {useState} from 'react'
 import {Link} from "react-router-dom"
 import login from './services/loginService'
 
-const Login = () => {
+const Login = ({user, setUser}) => {
   const [username, setUsername] = useState('') 
   const [password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState(null)
-  const [user, setUser] = useState(null)
 
   const handleLogin = async (event) => {
     event.preventDefault()
@@ -15,6 +14,7 @@ const Login = () => {
       const user = await login({
         username, password,
       })
+      console.log(user)
       setUser(user)
       setUsername('')
       setPassword('')

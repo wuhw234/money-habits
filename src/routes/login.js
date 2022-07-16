@@ -13,7 +13,6 @@ router.post('/', async (req, res) => {
       username: username
     }
   })
-  console.log('1')
   const passwordCorrect = user === null
     ? false
     : await bcrypt.compare(password, user.passwordHash)
@@ -22,7 +21,6 @@ router.post('/', async (req, res) => {
       error: 'invalid username or password'
     })
   }
-  console.log('2')
   const userForToken = {
     username: user.username,
     id: user.id

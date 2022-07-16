@@ -3,19 +3,19 @@ import {Tab, Tabs} from 'react-bootstrap'
 import LogExpenses from './LogExpenses'
 import ExpensesHistory from './ExpensesHistory'
 
-const Spending = () => {
+const Expenses = ({user}) => {
   return (
     <div>
         <Tabs defaultActiveKey="logExpenses" id="uncontrolled-tab-example" className="mb-3">
   <Tab eventKey="logExpenses" title="Log">
-    <LogExpenses />
+    <LogExpenses user={user}/>
   </Tab>
   <Tab eventKey="seeSpending" title="Spending History">
-    <ExpensesHistory />
+    <ExpensesHistory user={user}/>
   </Tab>
 </Tabs>
     </div>
   )
 }
 
-export default Spending
+export default Expenses
