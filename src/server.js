@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const { sequelize, connectToDatabase } = require('./database/db')
 const users = require('./routes/users')
 const habits = require('./routes/habits')
@@ -7,6 +8,7 @@ const login = require('./routes/login')
 
 const app = express()
 
+app.use(cors())
 app.use(express.json())
 app.use('/api/habits', habits)
 app.use('/api/expenses', expenses)

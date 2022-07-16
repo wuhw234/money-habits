@@ -9,9 +9,9 @@ const LogExpenses = () => {
         <h2>Log a spending</h2>
         <label for='name' className='form-label'>Name</label>
         <input id='name' type='text' className='form-control'/>
-        <label for='price' className='form-label'>Password</label>
+        <label for='price' className='form-label'>Cost</label>
         <input id='price' type='number' className='form-control'/>
-        <button type="submit" class="btn btn-primary">Log In</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 
     </div>

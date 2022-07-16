@@ -6,8 +6,8 @@ const Signup = () => {
     <div className='container'>
       <h1>Register</h1>
       <form>
-        <label for='email' className='form-label'>Email</label>
-        <input id='email' type='email' className='form-control'/>
+        <label for='username' className='form-label'>Username</label>
+        <input id='username' type='username' className='form-control'/>
         <label for='password' className='form-label'>Password</label>
         <input id='password' type='password' className='form-control'/>
         <label for='confirmPassword' className='form-label'>Confirm Password</label>

@@ -8,6 +8,7 @@ const ManageHabits = () => {
   <h1>Total Money Made From Habits:</h1>
   <h2>Manage your habits:</h2>
   <form>
+    
   </form>
 
 </div>
