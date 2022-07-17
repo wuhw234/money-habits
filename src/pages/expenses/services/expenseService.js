@@ -14,4 +14,12 @@ const getAll = async (token) => {
     console.log(response.data, 'data')
     return response.data
 }
-export default {getToken, getAll}
+
+const postExpense = async (token, expense) => {
+    const config = {
+        headers: {Authorization: token},
+    }
+    const response = await axios.post(baseUrl, expense, config)
+    return response.data
+}
+export default {getToken, getAll, postExpense}
