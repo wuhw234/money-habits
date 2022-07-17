@@ -17,6 +17,5 @@ Habit.init({
   sequelize,
   modelName: 'Habits',
   underscored: true,
-  timestamps: false,
 })
 module.exports = Habit

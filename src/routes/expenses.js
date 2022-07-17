@@ -8,6 +8,7 @@ var router = express.Router();
 router.get('/', tokenExtractor, async (req, res) => {
   try {
     const expenses = await Expense.findAll({
+      order: [['createdAt', 'DESC']],
       where: {
         UserId: req.decodedToken.id
       }

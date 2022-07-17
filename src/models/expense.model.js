@@ -17,7 +17,6 @@ Expense.init({
   sequelize,
   modelName: 'Expenses',
   underscored: true,
-  timestamps: false,
 })
 
 module.exports = Expense
