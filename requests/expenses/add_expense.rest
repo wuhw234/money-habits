@@ -1,8 +1,0 @@
-POST http://localhost:3001/api/expenses
-content-type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFuZHkiLCJpZCI6MSwiaWF0IjoxNjU3OTk0NTU3fQ.-5Z9bmfFFUeKg774KeL0UBifiwxbsW7GGgWTck6Xe7A
-
-{
-    "name": "corn dogs",
-    "cost": 12
-}
