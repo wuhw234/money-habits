@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar user={user}/>
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/about' element={<About />} />

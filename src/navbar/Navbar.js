@@ -5,7 +5,7 @@ import Toggle from './Toggle'
 import SignupButton from './SignupButton'
 import LoginButton from './LoginButton'
 
-const Navbar = () => {
+const Navbar = ({user}) => {
   return (
     <nav className='navbar navbar-expand-lg navbar-light bg-light' >
       <div className='container-fluid'>
@@ -19,8 +19,19 @@ const Navbar = () => {
             <Link route='/about' text='About' />
           </ul>
           <ul className='navbar-nav d-flex'>
-            <SignupButton />
-            <LoginButton />
+            {(
+              user ? (
+              <>
+                <div>Welcome!</div>
+                <div>Log Out</div>
+              </>
+            ) :
+            (
+              <>
+                <SignupButton />
+                <LoginButton />
+              </>
+            ))}
           </ul>
         </div>
       </div>
