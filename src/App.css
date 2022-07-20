@@ -1,0 +1,26 @@
+.flex-container {
+    display: flex;
+}
+.flex-child {
+    flex: 1;
+    padding: 3px;
+    border: 1px solid black;
+}  
+
+.box-input {
+    border: 1px solid blue;
+    display: inline-block;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    width: 2em;
+    line-height: inherit;
+    vertical-align: inherit;
+    color: inherit;
+    font: inherit;
+    background: none;
+  }
+  
+  .box-input[disabled] {
+    border: 0;
+  }
