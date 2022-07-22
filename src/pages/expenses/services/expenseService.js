@@ -22,4 +22,12 @@ const postExpense = async (token, expense) => {
     const response = await axios.post(baseUrl, expense, config)
     return response.data
 }
-export default {getToken, getAll, postExpense}
+
+const deleteExpense = async (token, id) => {
+    const config = {
+        headers: {Authorization: token},
+    }
+    const response = await axios.delete(baseUrl + `?id=${id}`, config)
+    return response.data
+}
+export default {getToken, getAll, postExpense, deleteExpense}

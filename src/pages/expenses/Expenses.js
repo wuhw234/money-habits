@@ -23,7 +23,7 @@ const Expenses = ({user}) => {
     <LogExpenses user={user} expenses={expenses} setExpenses={setExpenses}/>
   </Tab>
   <Tab eventKey="seeSpending" title="Spending History">
-    <ExpensesHistory expenses={expenses} />
+    <ExpensesHistory user={user} expenses={expenses} setExpenses={setExpenses} />
   </Tab>
 </Tabs>
     </div>

@@ -1,34 +1,26 @@
-import React, {useEffect, useState} from 'react'
-import expenseService  from './services/expenseService'
+import React from 'react'
+import expenseService from './services/expenseService'
 
-const ExpensesHistory = ({expenses}) => {
-  const [editing, setEditing] = useState(-1)
-
-  const isEditing = (id) => editing === id ? true : false
-  const toggleEditing = (id) => {
-    if (id === editing) {
-      setEditing(-1)
-    }
-    else {
-      setEditing(id)
-    }
+const ExpensesHistory = ({user, expenses, setExpenses}) => {
+  const handleDelete= async (id) => {
+    setExpenses(expenses.filter(expense => expense.id !== id))
+    const token = expenseService.getToken(user?.token)
+    await expenseService.deleteExpense(token, id)
   }
   return (
     <div>
       <h2>
       Expenses
       </h2>
-      {expenses.map(expense => 
-        <div className="flex-container" id={expense.id}>
-          <input className="flex-child box-input" disabled={!isEditing(expense.id)} value={expense.name}/>
-          <input className="flex-child box-input" disabled={!isEditing(expense.id)} value={expense.cost} />
-          <button className="flex-child" onClick={() => toggleEditing(expense.id)}>
-            {isEditing(expense.id) 
-            ? 'Done'
-            : 'Edit'
-            }
-          </button>
-          <button className="flex-child">delete</button>
+      {expenses?.map(expense => 
+        <div className="flex-container" key={expense.id}>
+          <div className="flex-child box-input">
+            {expense.name}
+          </div>
+          <div className="flex-child box-input">
+            {expense.cost}
+          </div>
+          <button className="flex-child" onClick={() => handleDelete(expense.id)}>delete</button>
         </div>
       )}
     </div>
