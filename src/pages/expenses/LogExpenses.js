@@ -11,7 +11,7 @@ const LogExpenses = ({user, expenses, setExpenses}) => {
     try {
       const token = expenseService.getToken(user?.token)
       const expense = await expenseService.postExpense(token, {name, cost})
-      setExpenses(expenses.concat(expense))
+      setExpenses([expense, ...expenses])
       setName('')
       setCost('')
     }
