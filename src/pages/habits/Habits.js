@@ -23,7 +23,7 @@ const Habits = ({user}) => {
     <ManageHabits user={user} habits={habits} setHabits={setHabits}/>
   </Tab>
   <Tab eventKey="logHabits" title="Log">
-    <LogHabits />
+    <LogHabits user={user} habits={habits} setHabits={setHabits}/>
   </Tab>
   <Tab eventKey="history" title="History">
     <History user={user} habits={habits} setHabits={setHabits}/>
